@@ -1,0 +1,146 @@
+.credit_card{
+    color : white;
+    font-family: Arial, Helvetica, sans-serif;
+    position : relative;
+}
+
+.credit_card .front,
+.credit_card .back{
+    background-color: hsl(200,80%,30%);
+    border: 1px solid hsl(200,80%,10%);
+    border-radius: .5rem;
+    width : 325px;
+    height: 150px;
+    padding: .75rem 1rem;
+    margin: 1rem;
+    padding-bottom: 1.25rem;
+}
+
+.credit_card .front{
+    display: flex;
+    flex-direction: column;
+    gap : 1rem;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.credit_card .card_data_row{
+    display: flex;
+    margin-bottom: auto;
+}
+
+.credit_card .logo{
+    width : 50px;
+    height: 40px;
+    flex-grow: 0;
+}
+
+.credit_card .brand_name{
+    flex-grow: 1;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.credit_card .form_group{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem
+}
+
+.credit_card fieldset{
+    border : none;
+    padding : 0;
+    margin : 0;
+}
+
+.credit_card fieldset legend{
+    visibility: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -200vh;
+}
+
+.credit_card .horizontal_input_stack{
+    display : flex;
+    gap : .5rem;
+}
+
+.credit_card .cc_inputs input{
+    width : 4ch;
+    font-family: monospace;
+}
+
+.credit_card input,
+.credit_card select{
+    padding: .25rem .5rem;
+    border : none;
+    border-radius: .25rem;
+    appearance: none;
+}
+
+.credit_card label{
+    font-size: .65rem;
+    text-transform: uppercase;
+}
+
+.credit_card .input_row{
+    display: flex;
+    gap : 2rem;
+}
+
+.credit_card .name_group{
+    flex-grow: 1;
+}
+
+.credit_card .front::before{
+    content : "";
+    position : absolute;
+    width : 400px;
+    height : 400px;
+    border-radius: 100%;
+    background-color: hsl(0,0%,100%, .15);
+    top : -250px;
+    left : -150px;
+    z-index: -1 ;
+}
+
+.credit_card .front::after{
+    content : "";
+    position : absolute;
+    width : 600px;
+    height : 600px;
+    border-radius: 100%;
+    background-color: hsl(0,0%,100%, .075);
+    bottom : -475px;
+    left : -150px;
+    z-index: -1 ;
+}
+
+.credit_card .back{
+    position: absolute;
+    top : 2rem;
+    left: 3.25rem;
+}
+
+.credit_card .stripe{
+    background-color: hsl(200,80%,10%);
+    height : 35px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top : 1.5rem;
+}
+
+.credit_card .cvc_group{
+    position: absolute;
+    bottom : 3.25rem;
+    right : .5rem;
+
+}
+
+.credit_card .cvc_input{
+    width: 3ch;
+    font-family: monospace;
+}
